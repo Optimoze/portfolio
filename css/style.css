@@ -1,0 +1,305 @@
+@charset "utf-8";
+
+.inner{width:100vw; margin:0 auto; padding: 0 3.64583vw; overflow:hidden;}
+#wrap{font-size: 1.1rem;}
+.left, .right{width: 50%;}
+
+#content > div{
+    width:100%;
+    left:0;
+    overflow:hidden;
+    padding-bottom: 8.8541666vw;
+}
+#cont1{background:#F9F5EA;}
+#cont2{background:#F9F5EA;}
+#cont3{background:#F9F5EA;}
+#cont4{background:#F9F5EA;}
+
+
+/******************/
+/***** header *****/
+/******************/
+header{
+    width:100%;
+    background:transparent;
+    position:fixed;
+    z-index:100;
+}
+#headerIn{
+    display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-between;
+    width:100%;
+    position:relative;
+    z-index: 99999;
+}
+#headerIn h1{
+    padding-top: 2.1875vw;
+    font-size: 1.1rem;
+}
+#headerIn h1 a{
+    mix-blend-mode: overlay;
+}
+.nav{
+    display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-between;
+    width: 18.229166vw;
+    padding-top: 2.1875vw;
+    font-weight: 700;
+}
+.nav li{
+    text-align:center;
+}
+.nav li:hover a{color:#c24332;}
+.nav li.active a{color:#c24332;}
+
+
+/****************/
+/***** Home *****/
+/****************/
+#cont1 .inner{
+    display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between;
+    width: 100%;
+    padding-bottom: 1.041667vw;
+}
+#cont1 .job{
+    padding-top: 15%;
+    font-size: 7.2rem;
+    font-weight: 500;
+    line-height: 7.2rem;
+}
+#cont1 .img{
+    width: 24.6875vw;
+    padding-top: 2.083vw;
+}
+#cont1 img{
+    width: 100%;
+}
+#cont1 .title{
+    padding-top: 6.25vw;
+    font-size: 4rem;
+    line-height: 4rem;
+}
+#cont1 .text{
+    padding-top: 0.52083vw;
+    font-size: 1rem;
+    font-weight: 300;
+}
+#cont1 .skill{
+    padding-top: 80%;
+    text-align: right;
+}
+#cont1 .name{
+    height: 7.2rem;
+    line-height: 7.2rem;
+    font-size: 7.2rem;
+    text-align: right;
+}
+
+
+/****************/
+/***** 나비 *****/
+/****************/
+#cont2 .inner{
+    display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between;
+    width: 100%;
+    margin-bottom: 2.604166vw;
+}
+#cont2 .img{
+    padding-top: 10%;
+}
+#cont2 img{
+    width: 100%;
+}
+#cont2 .pad{
+    padding-top: 15%;
+}
+#cont2 .title{
+    font-size: 5.7rem;
+    font-weight: 700;
+    border-bottom: 0.52083vw solid #000;
+}
+#cont2 .text{
+    padding-top: 4.16667vw;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+#cont2 .term{
+    padding-top: 2.604166vw;
+    font-weight: 300;
+}
+#cont2 .tools{
+    padding-top: 2.604166vw;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+/* 버튼 */
+#buttons1{
+    display: flex; flex-direction: row; flex-wrap: wrap; justify-content: flex-start;
+    width: 100%;
+    padding-top: 3.125vw;
+    padding-bottom: 8px;
+}
+
+#buttons1 button {
+    width: 7.8125vw;
+    height: 3.125vw;
+    margin-right: 1.04166vw;
+    padding: 0;
+    font-size: 0.8rem;
+    line-height: 3.125vw;
+    color: black;
+    background-color: #fff;
+    box-shadow: 0 0.20833vw 0.3645833vw rgb(0 0 0 / 15%);
+    border: none;
+    border-radius: 1.04166vw;
+    cursor: pointer;
+}
+
+#buttons1 button {
+    position: relative;
+}
+
+#buttons1 button .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+#buttons1 button span span {
+    display: block;
+    width: 7.8125vw;
+    height: 3.125vw;
+    line-height: 3.125vw;
+    color: #fff;
+    background: linear-gradient(to bottom, rgba(196,75,59,1) 0%,rgba(194,67,50,1) 100%);
+    border-radius: 1.04166vw;
+}
+
+
+/****************/
+/***** 평택 *****/
+/****************/
+#cont2 .ptitle{
+    font-size: 3.5rem;
+    font-weight: 700;
+    border-bottom: 0.52083vw solid #000;
+}
+
+
+/*****************/
+/***** PHOCA *****/
+/*****************/
+#cont2 .phtitle{
+    font-size: 5.7rem;
+    font-weight: 700;
+    border-bottom: 0.52083vw solid #000;
+}
+
+
+/******************/
+/***** 릴리리 *****/
+/*****************/
+#cont3 .inner{
+    display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between;
+    width: 100%;
+    overflow: unset;
+}
+#cont3 .right{
+    position: relative;
+}
+#cont3 .img{
+    position: absolute;
+    padding-top: 10%;
+    width: 100%;
+}
+#cont3 img{
+    width: 100%;
+}
+#cont3 video{
+    width: 17.96875vw;
+    margin-left: 13.28125vw;
+    padding-top: 10.0520833vw;
+}
+#cont3 .pad{
+    padding-top: 15%;
+}
+#cont3 .title{
+    font-size: 5.7rem;
+    font-weight: 700;
+    border-bottom: 0.52083vw solid #000;
+}
+#cont3 .text{
+    padding-top: 5.20833vw;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+#cont3 .term{
+    padding-top: 1.5625vw;
+    font-weight: 300;
+}
+#cont3 .tools{
+    padding-top: 1.5625vw;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+
+/*******************/
+/***** Graphic *****/
+/*******************/
+#cont4 .inner{
+    padding-top: 8%;
+}
+#gallery{
+    max-width: 67.708333vw !important;
+    margin: auto !important;
+}
+
+
+/*******************/
+/***** footer *****/
+/*******************/
+footer{
+    padding: 2.6041667vw 3.64583vw;
+    background-color: black;
+    color: white;
+}
+
+
+/* //////////////////////// */
+/* /////////반응형///////// */
+/* //////////////////////// */
+
+@media all and (max-width:970px){
+    /* 버튼 */
+    #buttons1 button {
+        width: 76px;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 10px;
+    }
+
+    #buttons1 button span span {
+        display: block;
+        width: 76px;
+        height: 30px;
+        line-height: 30px;
+        color: #fff;
+        background: linear-gradient(to bottom, rgba(196,75,59,1) 0%,rgba(194,67,50,1) 100%);
+        border-radius: 10px;
+    }
+}
+
+@media all and (max-width:800px){
+    .nav{
+        width: 170px;
+    }
+}
+
+@media all and (max-width:344px){
+    #buttons1 a{
+        margin-bottom: 5px;
+    }
+}

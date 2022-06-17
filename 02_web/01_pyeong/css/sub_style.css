@@ -1,0 +1,112 @@
+@charset "utf-8";
+
+/* ///////////////////////// */
+/* //페이지 내 공통 디자인/// */
+/* //////////////////////// */
+.inner{width:100%;max-width: 1440px; margin: 0 auto;}
+
+#wrap{width: 100%; position: relative;}
+
+
+/* //////////////////////// */
+/* /////////header///////// */
+/* //////////////////////// */
+#top{
+    padding: 5px 0;
+}
+
+
+#top .SNS{
+    font-size: 0.6rem;
+}
+#top .SNS a{
+    padding-left: 33px;
+}
+#top .SNS a:first-child{
+    margin-left: 18px;
+}
+#top .SNS .fa{
+    background: url(../image/top_face.png) no-repeat 12px;
+}
+#top .SNS .in{
+    background: url(../image/top_ins.png) no-repeat 14px;
+}
+#top .SNS .ka{
+    background: url(../image/top_kakao.png) no-repeat 12px;
+}
+
+
+/* //////////////////////// */
+/* ///////////nav////////// */
+/* //////////////////////// */
+#nav{
+    display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-between;
+    width: 100%;
+    padding: 14px 30px;
+    box-sizing: border-box;
+    z-index: 99999997;
+}
+
+
+#nav .depth1{
+    display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-between;
+    width: 60%;
+    text-align: center;
+    font-size: 1.1rem;
+}
+#nav .depth1 > li{
+    position: relative;
+    width: 25%;
+}
+
+#nav .depth1 ul{
+    background-color: white;
+    position: absolute;
+    z-index: 9999996;
+    width: 100%;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    font-weight: 300;
+    font-size: 0.75rem;
+}
+#nav .depth1 ul li{
+    padding: 10px 0;
+}
+
+#nav .depth1:hover ul{
+    opacity: 1;
+    height: 260px;
+    transition: opacity 0.5s, height 0.5s;
+    padding: 10px;
+}
+#nav .depth1 ul li:hover a{
+    text-decoration: underline;
+}
+
+
+#nav .logset{
+    display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-between;
+    padding: 5px 0;
+    font-size: 0.6rem;
+}
+#nav .logset .login{
+    padding-left: 25px;
+    background: url(../image/login.png) no-repeat;
+}
+#nav .logset .join{
+    padding-left: 50px;
+    background: url(../image/join.png) no-repeat 25px 0;
+}
+
+
+/* //////////////////////// */
+/* ////////section1//////// */
+/* //////////////////////// */
+#section1{
+    position: relative;
+}
+#section1 .log{
+    position: absolute;
+    top: 0; right: 0;
+}

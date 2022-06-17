@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="shortcut icon" type="image/x-icon" href="image/favicon-32x32.png">
+
+    <link rel="stylesheet" href="css/common.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="javascript/jquery-3.1.1.min.js" type="text/javascript"></script>
+    
+    <script type='text/javascript' src='javascript/jquery-ui-1.10.3.custom.min.js'></script>
+
+    <script type='text/javascript' src='javascript/jquery-11.0.min.js'></script>	
+	<script type='text/javascript' src='javascript/unitegallery.min.js'></script>	
+
+	<link rel='stylesheet' href='css/unite-gallery.css' type='text/css' />
+	
+	<script type='text/javascript' src='javascript/ug-theme-grid.js'></script>
+    
+    <script>
+        $(document).ready(function() {
+            var menu = $(".nav > li");
+            var content = $("#content > div");
+            menu.click(function(){
+                event.preventDefault();
+                var tg = $(this);
+                var idx = tg.index();
+                var section = content.eq(idx);
+                var tt = section.offset().top;
+                $("html,body").stop().animate({scrollTop:tt});
+            });
+                
+            $(window).scroll(function(){
+                var location = $(window).scrollTop();
+                content.each(function() {
+                    var tg = $(this);
+                    var idx = tg.index();
+                    if(tg.offset().top <= location){
+                        menu.removeClass("active");
+                        menu.eq(idx).addClass("active");
+                    }
+                });
+            });
+        });
+        jQuery(document).ready(function(){
+                
+            jQuery("#gallery").unitegallery({
+                thumb_overlay_color: "rgba(0,0,0,0.2)"
+            });
+    
+        });
+        $(function(){
+            var duration = 300;
+            $('#buttons1 button:nth-child(-n+4)')
+            .on('mouseover', function(){
+                $(this).find('> span')
+                .stop(true).animate({width: '100%'}, duration, 'easeOutQuad');
+            })
+            .on('mouseout', function(){
+                $(this).find('> span')
+                .stop(true).animate({width: '0%'}, duration, 'easeOutQuad');
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div class="inner">
+                <div id="headerIn">
+                    <h1><a href="#">JuYeongDae</a></h1>
+                    <ul class="nav">
+                        <li class="active"><a href="#cont1">Home</a></li>
+                        <li><a href="#cont2">Web</a></li>
+                        <li><a href="#cont3">App</a></li>
+                        <li><a href="#cont4">Graphic</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div id="content">
+            <div id="cont1">
+                <div class="inner">
+                    <div class="left">
+                        <p class="job">
+                            WEB DESIGN<br>PUBLISHER</p>
+                        <p class="img"><img src="image/me.jpg" alt="주영대"></p>
+                        <p class="title">
+                            一切唯心造
+                        </p>
+                        <p class="text">
+                            모든 것은 오직 마음먹기에 달렸다.
+                        </p>
+                    </div>
+                    <div class="right">
+                        <p class="skill">HTML5 / CSS3 / JavaScript / jQuery<br>C / C++ / Photoshop / Illustrator</p>
+                        <p class="name">JuYeongDae</p>
+                    </div>
+                </div>
+            </div>
+            <div id="cont2">
+                <div class="inner">
+                    <div class="left">
+                        <p class="pad"><span class="title">나비동물병원</span></p>
+                        <p class="text">
+                            반려동물을 키우거나 관심이 있는 사람들을 위해<br>
+                            의료정보 전달 및 빠른 상담 서비스를 제공하며<br>
+                            친근한 느낌이 들도록 로고 및 페이지를 제작하였습니다.<br>
+                        </p>
+                        <p class="term">
+                            기획 및 프로토타입 : 5일<br>
+                            이미지 제작 : 3일<br>
+                            로고 기획 및 제작 : 4일<br>
+                            아이콘 기획 및 제작 : 1일<br>
+                            구현 : 4일<br>
+                        </p>
+                        <p class="tools">
+                            Photoshop / Illustrator /<br> HTML5 / CSS3 / JavaScript / jQuery
+                        </p>
+                        <div id="buttons1">
+                            <a href="#"><button>디자인 가이드<span class="bg"><span>디자인 가이드</span></span></button></a>
+                            <a href="02_web/02_navi/index.html" target="_blank"><button>사이트 방문<span class="bg"><span>사이트 방문</span></span></button></a>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <p class="img"><img src="image/edit_navi.jpg" alt="나비동물병원" title="나비동물병원"></p>
+                    </div>
+                </div>
+                <div class="inner">
+                    <div class="left">
+                        <p class="pad"><span class="ptitle">평택시청소년상담복지센터</span></p>
+                        <p class="text">
+                            기존의 사이트를 리뉴얼한 페이지로<br>
+                            운영시간 및 위치정보를 찾기 쉽게 하고<br>
+                            부드러운 느낌을 주는 것에 초점을 두었습니다.<br>
+                        </p>
+                        <p class="term">
+                            기획 및 프로토타입 : 6일<br>
+                            이미지 제작 : 3일<br>
+                            구현 : 2일<br>
+                        </p>
+                        <p class="tools">
+                            Photoshop /<br> HTML5 / CSS3 / JavaScript / jQuery
+                        </p>
+                        <div id="buttons1">
+                            <a href="02_web/01_pyeong/index.html" target="_blank"><button>사이트 방문<span class="bg"><span>사이트 방문</span></span></button></a>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <p class="img"><img src="image/edit_Pyeong.jpg" alt="평택시청소년상담복지센터" title="평택시청소년상담복지센터"></p>
+                    </div>
+                </div>
+                <div class="inner">
+                    <div class="left">
+                        <p class="pad"><span class="phtitle">PHOCA</span></p>
+                        <p class="text">
+                            cafe24의 템플릿을 활용하여 제작한<br>
+                            휴대폰 액세서리 쇼핑몰로,<br>
+                            전체적인 콘텐츠들을 크게 만들어<br>
+                            제품이 한눈에 들어와 몰입할 수 있도록 하였습니다.<br>
+                        </p>
+                        <p class="term">
+                            기획 : 2일<br>
+                            이미지 제작 : 3일<br>
+                            구현 : 3일<br>
+                        </p>
+                        <p class="tools">
+                            Photoshop /<br> HTML5 / CSS3 / JavaScript / jQuery
+                        </p>
+                        <div id="buttons1">
+                            <a href="#"><button>상세 페이지<span class="bg"><span>상세 페이지</span></span></button></a>
+                            <a href="http://jyd15.cafe24.com/" target="_blank"><button>사이트 방문<span class="bg"><span>사이트 방문</span></span></button></a>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <p class="img"><img src="image/edit_phoca.jpg" alt="PHOCA" title="PHOCA"></p>
+                    </div>
+                </div>
+            </div>
+            <div id="cont3">
+                <div class="inner">
+                    <div class="left">
+                        <p class="pad"><span class="title">lIllIlI</span></p>
+                        <p class="text">
+                            Figma를 이용하여 제작한<br>
+                            유통기한 관리어플 '릴리리'입니다.<br>
+                            퍼소나, 사용자 시나리오, SWOT 등을<br>
+                            분석함으로써 사용자 입장에서 필요로 하는 기능들을 넣었습니다.<br>
+                        </p>
+                        <p class="term">
+                            기획 : 3일<br>
+                            구현 : 3일<br>
+                        </p>
+                        <p class="tools">
+                            Photoshop / Figma
+                        </p>
+                        <div id="buttons1">
+                            <a href="#"><button>UX 설계<span class="bg"><span>UX 설계</span></span></button></a>
+                            <a href="#"><button>사이트 방문<span class="bg"><span>사이트 방문</span></span></button></a>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <p class="img"><img src="image/phone.png" alt="릴리리" title="릴리리"></p>
+                        <video autoplay="true" muted loop="true" src="image/lillili-1.mp4"></video>
+                    </div>
+                </div>
+            </div>
+            <div id="cont4">
+                <div class="inner">
+                    <div id="gallery" style="display:none;">
+                        <img alt="Underwater Train"
+                            src="01_graphic/thumbs/underwater_train_big.jpg"
+                            data-image="01_graphic/img/underwater_train.jpg"
+                            data-description="3가지 사진을 이용한 합성 사진입니다.">
+                        
+                        <img alt="배너1 1080X490"
+                            src="01_graphic/thumbs/banner1.jpg"
+                            data-image="01_graphic/img/banner1.jpg"
+                            data-description="규격 배리에이션에 따른 웹 배너 제작">
+                             
+                        <img alt="배너2 300X600"
+                            src="01_graphic/thumbs/banner2.jpg"
+                            data-image="01_graphic/img/banner2.jpg"
+                            data-description="규격 배리에이션에 따른 웹 배너 제작">
+                            
+                        <img alt="배너3 320X100"
+                            src="01_graphic/thumbs/banner3.jpg"
+                            data-image="01_graphic/img/banner3.jpg"
+                            data-description="규격 배리에이션에 따른 웹 배너 제작">
+                        
+                        <img alt="팝업 광고 1"
+                            src="01_graphic/thumbs/popup1.jpg"
+                            data-image="01_graphic/img/popup1.jpg"
+                            data-description="팝업 광고 제작">
+                             
+                        <img alt="팝업 광고 2"
+                            src="01_graphic/thumbs/popup2.jpg"
+                            data-image="01_graphic/img/popup2.jpg"
+                            data-description="팝업 광고 제작">
+
+                        <img alt="유앤아이치과병원 메인 배너 1"
+                            src="01_graphic/thumbs/mainbanner_1.jpg"
+                            data-image="01_graphic/img/mainbanner_1.jpg"
+                            data-description="웹사이트 메인 배너 제작">
+                                
+                        <img alt="유앤아이치과병원 메인 배너 2"
+                            src="01_graphic/thumbs/mainbanner_2.jpg"
+                            data-image="01_graphic/img/mainbanner_2.jpg"
+                            data-description="웹사이트 메인 배너 제작">
+                
+                        <img alt="평택시청소년상담복지센터 메인 슬라이드 1"
+                            src="01_graphic/thumbs/main1.jpg"
+                            data-image="01_graphic/img/main1.jpg"
+                            data-description="첫 번째 홈페이지 메인 슬라이드 제작">
+                
+                        <img alt="평택시청소년상담복지센터 메인 슬라이드 2"
+                            src="01_graphic/thumbs/main2.jpg"
+                            data-image="01_graphic/img/main2.jpg"
+                            data-description="첫 번째 홈페이지 메인 슬라이드 제작">
+
+                        <img alt="평택시청소년상담복지센터 팝업"
+                            src="01_graphic/thumbs/pop.jpg"
+                            data-image="01_graphic/img/pop.jpg"
+                            data-description="첫 번째 홈페이지 팝업 제작">
+                             
+                        <img alt="나비동물병원 PC화면 메인 슬라이드 1"
+                            src="01_graphic/thumbs/PCMS1.jpg"
+                            data-image="01_graphic/img/PCMS1.jpg"
+                            data-description="두 번째 홈페이지 PC화면 메인 슬라이드 제작">
+                        
+                        <img alt="나비동물병원 PC화면 메인 슬라이드 2"
+                            src="01_graphic/thumbs/PCMS2.jpg"
+                            data-image="01_graphic/img/PCMS2.jpg"
+                            data-description="두 번째 홈페이지 PC화면 메인 슬라이드 제작">
+                             
+                        <img alt="나비동물병원 모바일화면 메인슬라이드1"
+                            src="01_graphic/thumbs/MBMS1.jpg"
+                            data-image="01_graphic/img/MBMS1.jpg"
+                            data-description="두 번째 홈페이지 모바일화면 메인 슬라이드 제작">
+                
+                        <img alt="나비동물병원 모바일화면 메인슬라이드2"
+                            src="01_graphic/thumbs/MBMS2.jpg"
+                            data-image="01_graphic/img/MBMS2.jpg"
+                            data-description="두 번째 홈페이지 모바일화면 메인 슬라이드 제작">
+                                
+                        <img alt="나비동물병원 로고"
+                            src="01_graphic/thumbs/logo.jpg"
+                            data-image="01_graphic/img/logo.jpg"
+                            data-description="두 번째 홈페이지 로고 자체 제작">
+                             
+                        <img alt="나비동물병원 아이콘"
+                            src="01_graphic/thumbs/icon.jpg"
+                            data-image="01_graphic/img/icon.jpg"
+                            data-description="두 번째 홈페이지 아이콘 자체 제작">
+
+                        <img alt="나비동물병원 카드뉴스"
+                            src="01_graphic/thumbs/card_news.jpg"
+                            data-image="01_graphic/img/card_news.jpg"
+                            data-description="두 번째 홈페이지 관련 카드뉴스 제작">
+                             
+                        <img alt="PHOCA 메인 슬라이드1"
+                            src="01_graphic/thumbs/slide1.jpg"
+                            data-image="01_graphic/thumbs/slide1.jpg"
+                            data-description="세 번째 홈페이지 메인 슬라이드 제작">
+                             
+                        <img alt="PHOCA 메인 슬라이드2"
+                            src="01_graphic/thumbs/slide2.jpg"
+                            data-image="01_graphic/thumbs/slide2.jpg"
+                            data-description="세 번째 홈페이지 메인 슬라이드 제작">
+                        
+                        <img alt="PHOCA 팝업"
+                            src="01_graphic/thumbs/pop_up.jpg"
+                            data-image="01_graphic/img/pop_up.jpg"
+                            data-description="세 번째 홈페이지 팝업 제작">
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <p>TEL. 010-9697-1337</p>
+                <br>
+                <p>E-Mail. jyd15@naver.com</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

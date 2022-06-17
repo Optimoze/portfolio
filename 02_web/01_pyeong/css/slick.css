@@ -1,0 +1,204 @@
+/* Slider */
+.slick-slider
+{
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+
+/* //////////////////////// */
+/* ////////수정하기//////// */
+/* //////////////////////// */
+
+/******** 슬라이드 ********/
+#slide .slick-slide img{
+    width: 100%;
+}
+/* 슬라이드 버튼 */
+#slide .slick-arrow{
+    position: absolute; top: 50%;
+    width: 100px; height: 100px;
+    transform: translate(0, -50%);
+    border: none;
+    font-size: 0;
+    z-index: 9999;
+}/* 이전버튼 다음버튼 공통사항 */
+#slide .slick-arrow:hover{
+    cursor: pointer;
+}
+#slide .slick-prev{
+    left: 50px;
+    background: url(../image/slide_left-arrow.png) no-repeat center;
+}
+#slide .slick-next{
+    right: 50px;
+    background: url(../image/slide_right-arrow.png) no-repeat center;
+}
+/* 슬라이드 위치버튼 */
+#slide .slick-dots{
+    position: absolute; bottom: 50px; left: 50%;
+    transform: translate(-50%,0);
+}
+#slide .slick-dots li{
+    display: inline-block;
+    margin: 0 5px;
+}
+#slide .slick-dots button{
+    border-radius: 50%;
+    width: 20px; height: 20px;
+    background-color: rgba(245, 172, 51,0.3);
+    border: 1px solid rgba(245, 172, 51,1);
+    font-size: 0;
+}
+#slide .slick-active button{
+    background-color: rgba(245, 172, 51,1);
+    width: 40px; border-radius: 10px;
+}
+
+
+/******** 연계사이트 ********/
+#sec3 .regular{
+    width: calc(100% - 60px);
+    margin: auto;
+}
+#sec3 .regular .slick-slide{
+    text-align: center;
+    /* border: 1px solid #ddd; */
+    box-sizing: border-box;
+    height: 52px;
+}
+#sec3 .regular img{
+    margin: auto;
+}
+#sec3 .slick-arrow{
+    position: absolute; top: 50%;
+    width: 30px; height: 30px;
+    transform: translate(0, -50%);
+    border: none;
+    font-size: 0;
+    z-index: 9999;
+}/* 이전버튼 다음버튼 공통사항 */
+#sec3 .slick-arrow:hover{
+    cursor: pointer;
+}
+#sec3 .slick-prev{
+    left: -30px;
+    background: url(../image/link_left-arrow.png) no-repeat center;
+}
+#sec3 .slick-next{
+    right: -30px;
+    background: url(../image/link_right-arrow.png) no-repeat center;
+}

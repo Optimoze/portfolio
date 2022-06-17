@@ -1,0 +1,232 @@
+/* Slider */
+.slick-slider
+{
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+
+/* //////////////////////// */
+/* ////////수정하기//////// */
+/* //////////////////////// */
+
+/******** 메인슬라이드 ********/
+/******** 슬라이드 ********/
+#slide .slick-slide img{
+    width: 100%;
+}
+/* 슬라이드 버튼 */
+#slide .slick-arrow{
+    position: absolute; bottom: 15px;
+    width: 50px; height: 50px;
+    background-size: 50px;
+    border: none;
+    font-size: 0;
+    z-index: 9999;
+}/* 이전버튼 다음버튼 공통사항 */
+#slide .slick-arrow:hover{
+    cursor: pointer;
+}
+#slide .slick-prev{
+    left: 50%;
+    transform: translate(-140px, 0);
+    background: url(../image/arrow_main_prev.png) no-repeat center;
+}
+#slide .slick-next{
+    left: 50%;
+    transform: translate(50px, 0);
+    background: url(../image/arrow_main_next.png) no-repeat center;
+}
+/* 슬라이드 위치버튼 */
+#slide .slick-dots{
+    position: absolute; bottom: 30px; left: 50%;
+    transform: translate(-50%, 0);
+}
+#slide .slick-dots li{
+    display: inline-block;
+}
+#slide .slick-dots li:first-child{
+    margin-right: 17px;
+}
+#slide .slick-dots button{
+    border-radius: 50%;
+    width: 20px; height: 20px;
+    background-color: rgba(230, 248, 255,0);
+    border: 1px solid rgba(230, 248, 255,1);
+    font-size: 0;
+}
+#slide .slick-active button{
+    background-color: rgba(230, 248, 255,1);
+    width: 40px; border-radius: 10px;
+    transition: 0.3s;
+}
+
+
+/******** 의료진 소개 ********/
+#sec3 .slick-list {
+    /* position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0; */
+    width: calc((100% - 75px*2 - 110px));
+    margin: auto;
+}
+#sec3 .slick-slide img {
+    /* display: block; */
+    margin: auto;
+    border-radius: 30px;
+    box-shadow: 0 1px 7px rgb(0 0 0 / 15%);
+}
+/* 슬라이드 버튼 */
+#sec3 .slick-arrow{
+    position: absolute; top: 50%;
+    transform: translate(0, -50%);
+    width: 75px; height: 75px;
+    border-radius: 37.5px;
+    box-shadow: 0 4px 7px rgb(0 0 0 / 15%);
+    border: none;
+    font-size: 0;
+    z-index: 99;
+}/* 이전버튼 다음버튼 공통사항 */
+#sec3 .slick-arrow:hover{
+    cursor: pointer;
+}
+#sec3 .slick-prev{
+    left: 0;
+    background: url(../image/arrow_prev.png) no-repeat center;
+    background-size: 46px;
+}
+#sec3 .slick-next{
+    right: 0;
+    background: url(../image/arrow_next.png) no-repeat center;
+    background-size: 46px;
+}
+
+
+/* //////////////////////// */
+/* /////////반응형///////// */
+/* //////////////////////// */
+@media all and (max-width:1200px){
+    /******** 의료진 소개 ********/
+    #sec3 .slick-list {
+        width: 100%;
+    }
+    /* 슬라이드 버튼 */
+    #sec3 .slick-arrow{
+        visibility: hidden;
+    }/* 이전버튼 다음버튼 공통사항 */
+}

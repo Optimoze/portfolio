@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+/*googleips 웹폰트 css 파일 불러오기*/
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap'); */
+
+/* 저장된 글꼴 파일 선언*/
+@font-face {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-weight: 700;
+      src : url(../font/NotoSansKR-Bold.woff);
+}
+@font-face {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-weight: 500;
+      src : url(../font/NotoSansKR-Medium.woff);
+}
+@font-face {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-weight: 400;
+      src : url(../font/NotoSansKR-Regular.woff);
+}
+@font-face {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-weight: 300;
+      src : url(../font/NotoSansKR-Light.woff);
+}
+
+* {
+      margin:0; padding:0;
+      box-sizing: border-box;
+}
+html{
+      font-size: 20px;
+}
+body{
+      font-size: 20px;
+      color:#333;
+      font-family: 'Noto Sans KR', sans-serif;
+      font-weight: 400;
+}
+section{
+      margin-bottom: 100px;
+}
+ul, ol, li{
+      list-style-type:none;
+}
+img, fieldset{
+      border:none;
+      vertical-align: middle;
+}
+/* vertical-align은 table에만 쓸 수 있지만 예외적으로 img, fieldset에도 사용 가능 */
+hr {
+      clear:both;
+      border:none;
+}
+/* 수평선으로 그냥 clear:both를 위한 용도 일종의 :after같은 것 */
+a {
+      outline: 0;
+      color:inherit;
+      text-decoration:none;
+}
+table{
+      border-collapse:collapse;
+}
+input, textarea {
+      color:inherit;font-size:inherit;
+      font-family:inherit;
+      vertical-align: middle;
+}
+       /* 우리가 잡은 색과 글꼴 사이즈가 안나오고 자기마음대로 나올 때가 있기 때문에 inherit로 부모 따라가게 */
+       /* outline:0을 넣기도 한다. 설명 못들음 */
+button{
+      outline:0;
+}
