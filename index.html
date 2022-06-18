@@ -29,7 +29,7 @@
                 var tg = $(this);
                 var idx = tg.index();
                 var section = content.eq(idx);
-                var tt = section.offset().top;
+                var tt = section.offset().top + 1;
                 $("html,body").stop().animate({scrollTop:tt});
             });
                 
@@ -62,6 +62,22 @@
             .on('mouseout', function(){
                 $(this).find('> span')
                 .stop(true).animate({width: '0%'}, duration, 'easeOutQuad');
+            });
+
+
+            $('.a_pop').each(function(){
+                $(this).click(function(event){
+                    event.preventDefault();
+
+                    var img_src = $(this).attr('href');
+                    //var img_title = $(this).attr('title');
+                    $('#modal').fadeIn();
+                    $('#modal img').attr('src',img_src);
+                    //$('#modal .txt').text(img_title);
+                });
+            });
+            $("#modal").click(function(){
+                $("#modal").fadeOut();
             });
         });
     </script>
@@ -121,7 +137,18 @@
                             Photoshop / Illustrator /<br> HTML5 / CSS3 / JavaScript / jQuery
                         </p>
                         <div id="buttons1">
-                            <a href="#"><button>디자인 가이드<span class="bg"><span>디자인 가이드</span></span></button></a>
+                            <div id="modal">
+                                <!-- <div class="button">
+                                    <button type="button" id="btn-close">닫기</button>
+                                </div> -->
+                                <div class="body">
+                                    <div class="img">
+                                        <img src="test.jpg">
+                                        <p class="txt"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="02_web/02_navi/guide.jpg" class="a_pop"><button>디자인 가이드<span class="bg"><span>디자인 가이드</span></span></button></a>
                             <a href="02_web/02_navi/index.html" target="_blank"><button>사이트 방문<span class="bg"><span>사이트 방문</span></span></button></a>
                         </div>
                     </div>
@@ -171,7 +198,18 @@
                             Photoshop /<br> HTML5 / CSS3 / JavaScript / jQuery
                         </p>
                         <div id="buttons1">
-                            <a href="#"><button>상세 페이지<span class="bg"><span>상세 페이지</span></span></button></a>
+                            <div id="modal">
+                                <!-- <div class="button">
+                                    <button type="button" id="btn-close">닫기</button>
+                                </div> -->
+                                <div class="body">
+                                    <div class="img">
+                                        <img src="test.jpg">
+                                        <p class="txt"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="02_web/detail.jpg" class="a_pop"><button>상세 페이지<span class="bg"><span>상세 페이지</span></span></button></a>
                             <a href="http://jyd15.cafe24.com/" target="_blank"><button>사이트 방문<span class="bg"><span>사이트 방문</span></span></button></a>
                         </div>
                     </div>
@@ -198,8 +236,18 @@
                             Photoshop / Figma
                         </p>
                         <div id="buttons1">
-                            <a href="#"><button>UX 설계<span class="bg"><span>UX 설계</span></span></button></a>
-                            <a href="#"><button>사이트 방문<span class="bg"><span>사이트 방문</span></span></button></a>
+                            <div id="modal">
+                                <!-- <div class="button">
+                                    <button type="button" id="btn-close">닫기</button>
+                                </div> -->
+                                <div class="body">
+                                    <div class="img">
+                                        <img src="test.jpg">
+                                        <p class="txt"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="01_graphic/UX.jpg" class="a_pop"><button>UX 설계<span class="bg"><span>UX 설계</span></span></button></a>
                         </div>
                     </div>
                     <div class="right">
